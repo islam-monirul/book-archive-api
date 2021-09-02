@@ -4,9 +4,16 @@ searchBtn.addEventListener('click', () => {
      const searchArea = document.getElementById('bookName');
      const searchText = searchArea.value;
 
+     // clearing result area on every new value insert | adding loading text initially on result count
+     document.getElementById('result-container').textContent = '';
+     document.getElementById('result-count').textContent = 'Loading...';
+
      // if no search text given
      if( searchText === ''){
           alert('Please type a book name that you want to search');
+          // clearing previous results when no value given as input
+          document.getElementById('result-container').textContent = '';
+          document.getElementById('result-count').textContent = '';
      }
      // if ok then call the load function
      else{
