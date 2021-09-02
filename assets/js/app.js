@@ -40,6 +40,9 @@ const displaySearchResult = data => {
      const mainContainer = document.getElementById('result-container');
      // clearing & reseting the result container before showing the new result
      mainContainer.textContent = '';
+     
+     // clearing and reseting previous search count results
+     document.getElementById('result-count').textContent = '';
 
      /*---------- if no matched results found ----------*/
      if(books.length === 0){
